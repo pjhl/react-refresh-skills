@@ -11,3 +11,30 @@ table tbody tr td {
   border-bottom: 1px solid silver;
   padding: 10px 0;
 }
+
+ul.menu {
+  text-align: left;
+  padding: 0;
+}
+ul.menu li {
+  list-style-type: none;
+  background-color: rgb(57, 90, 106);
+  color: white;
+}
+ul.menu li a {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 16px;
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  transition: color 0.3s;
+}
+ul.menu li a:hover {
+  color: rgb(170, 189, 209);
+  border-left: 4px solid rgb(198, 95, 57);
+}
+ul.menu ul.menu li a {
+  padding-left: 32px;
+}

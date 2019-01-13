@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import StateCounter from './components/StateCounter'
 import StatePropsCounter from './components/StatePropsCounter'
 import ChildExample from './components/childExample'
+import MenuExample from './components/menu/MenuExample'
 
 class App extends Component {
   render () {
@@ -31,6 +32,12 @@ class App extends Component {
               <ChildExample />
             </td>
             <td>Children elements example</td>
+          </tr>
+          <tr>
+            <td className='center'>
+              <MenuExample />
+            </td>
+            <td>Simple two-level menu example</td>
           </tr>
         </tbody>
       </table>
