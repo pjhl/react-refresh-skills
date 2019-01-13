@@ -3,6 +3,7 @@ import StateCounter from './components/StateCounter'
 import StatePropsCounter from './components/StatePropsCounter'
 import ChildExample from './components/childExample'
 import MenuExample from './components/menu/MenuExample'
+import Events from './components/Events'
 
 class App extends Component {
   render () {
@@ -15,6 +16,12 @@ class App extends Component {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <Events />
+            </td>
+            <td>Events example</td>
+          </tr>
           <tr>
             <td className='center'>
               <MenuExample />
