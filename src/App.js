@@ -17,15 +17,9 @@ class App extends Component {
         <tbody>
           <tr>
             <td className='center'>
-              <StateCounter />
+              <MenuExample />
             </td>
-            <td>Simple stateful counter. Click on digit to increase counter</td>
-          </tr>
-          <tr>
-            <td className='center'>
-              <StatePropsCounter />
-            </td>
-            <td>Stateful counter with props example</td>
+            <td>Simple two-level menu example</td>
           </tr>
           <tr>
             <td className='center'>
@@ -35,9 +29,15 @@ class App extends Component {
           </tr>
           <tr>
             <td className='center'>
-              <MenuExample />
+              <StatePropsCounter />
             </td>
-            <td>Simple two-level menu example</td>
+            <td>Stateful counter with props example</td>
+          </tr>
+          <tr>
+            <td className='center'>
+              <StateCounter />
+            </td>
+            <td>Simple stateful counter. Click on digit to increase counter</td>
           </tr>
         </tbody>
       </table>

@@ -24,7 +24,7 @@ export default class MenuItem extends Component {
     const { name } = this.props
     return (
       <li>
-        <a href='#'>{name}</a>
+        <a href='#1'>{name}</a>
         {this.renderChildren()}
       </li>
     )
