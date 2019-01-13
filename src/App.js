@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import StateCounter from './components/StateCounter'
+import StatePropsCounter from './components/StatePropsCounter'
 
 class App extends Component {
   render () {
@@ -17,6 +18,12 @@ class App extends Component {
               <StateCounter />
             </td>
             <td>Simple stateful counter. Click on digit to increase counter</td>
+          </tr>
+          <tr>
+            <td className='center'>
+              <StatePropsCounter />
+            </td>
+            <td>Stateful counter with props example</td>
           </tr>
         </tbody>
       </table>
