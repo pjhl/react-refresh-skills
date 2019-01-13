@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import StateCounter from './components/StateCounter'
 import StatePropsCounter from './components/StatePropsCounter'
+import ChildExample from './components/childExample'
 
 class App extends Component {
   render () {
@@ -24,6 +25,12 @@ class App extends Component {
               <StatePropsCounter />
             </td>
             <td>Stateful counter with props example</td>
+          </tr>
+          <tr>
+            <td className='center'>
+              <ChildExample />
+            </td>
+            <td>Children elements example</td>
           </tr>
         </tbody>
       </table>
