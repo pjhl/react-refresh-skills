@@ -9,6 +9,7 @@ import RefExample from './components/RefExample'
 import HighOrderComponentsExample from './components/HighOrderComponentsExample'
 import HOCLoaderExample from './components/HOCLoaderExample'
 import PortalExample from './components/PortalExample'
+import ContextExample from './components/ContextExample'
 
 class App extends Component {
   render () {
@@ -21,6 +22,12 @@ class App extends Component {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <ContextExample />
+            </td>
+            <td>React context example</td>
+          </tr>
           <tr>
             <td className='center'>
               <PortalExample />
