@@ -7,6 +7,7 @@ import Events from './components/Events'
 import FormExample from './components/FormExample'
 import RefExample from './components/RefExample'
 import HighOrderComponentsExample from './components/HighOrderComponentsExample'
+import HOCLoaderExample from './components/HOCLoaderExample'
 
 class App extends Component {
   render () {
@@ -19,6 +20,12 @@ class App extends Component {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <HOCLoaderExample />
+            </td>
+            <td>Loader with High Order Components (HOC) example</td>
+          </tr>
           <tr>
             <td className='center'>
               <HighOrderComponentsExample />
