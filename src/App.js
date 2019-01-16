@@ -5,6 +5,7 @@ import ChildExample from './components/childExample'
 import MenuExample from './components/menu/MenuExample'
 import Events from './components/Events'
 import FormExample from './components/FormExample'
+import RefExample from './components/RefExample'
 
 class App extends Component {
   render () {
@@ -17,6 +18,12 @@ class App extends Component {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <RefExample />
+            </td>
+            <td>Ref example</td>
+          </tr>
           <tr>
             <td className='center'>
               <FormExample />
