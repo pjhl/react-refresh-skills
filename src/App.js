@@ -6,6 +6,7 @@ import MenuExample from './components/menu/MenuExample'
 import Events from './components/Events'
 import FormExample from './components/FormExample'
 import RefExample from './components/RefExample'
+import HighOrderComponentsExample from './components/HighOrderComponentsExample'
 
 class App extends Component {
   render () {
@@ -18,6 +19,12 @@ class App extends Component {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <HighOrderComponentsExample />
+            </td>
+            <td>High Order Components simple example</td>
+          </tr>
           <tr>
             <td className='center'>
               <RefExample />

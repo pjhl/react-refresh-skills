@@ -38,3 +38,11 @@ ul.menu li a:hover {
 ul.menu ul.menu li a {
   padding-left: 32px;
 }
+
+/* HOC example */
+.hoc-link {
+  color: rgb(74, 81, 102);
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+}
