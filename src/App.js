@@ -10,6 +10,7 @@ import HighOrderComponentsExample from './components/HighOrderComponentsExample'
 import HOCLoaderExample from './components/HOCLoaderExample'
 import PortalExample from './components/PortalExample'
 import ContextExample from './components/ContextExample'
+import RouteExample from './components/RouteExample'
 
 class App extends Component {
   render () {
@@ -22,6 +23,12 @@ class App extends Component {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <RouteExample />
+            </td>
+            <td>React-router-dom simple example</td>
+          </tr>
           <tr>
             <td className='center'>
               <ContextExample />
