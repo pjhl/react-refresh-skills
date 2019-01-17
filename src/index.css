@@ -46,3 +46,9 @@ ul.menu ul.menu li a {
   font-size: 18px;
   display: block;
 }
+
+/* Route example */
+nav a.active {
+  color: rgb(91, 18, 121);
+  font-weight: bold;
+}
