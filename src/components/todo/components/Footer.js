@@ -23,9 +23,10 @@ export default class Footer extends Component {
   render () {
     // TODO: Remove this mocked var
     const activeFilter = null
+    const { records } = this.props
     return (
       <div className='tasks-footer'>
-        Displayed {'0'} of {'0'} records.<br />
+        Displayed {records.count} of {records.count} records.<br />
         Filter:
         {FILTER_BUTTONS.map(({ text, value }, index) => (
           <button

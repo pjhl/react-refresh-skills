@@ -11,7 +11,7 @@ import HOCLoaderExample from './components/HOCLoaderExample'
 import PortalExample from './components/PortalExample'
 import ContextExample from './components/ContextExample'
 import RouteExample from './components/RouteExample'
-import TodoApp from './components/todo/TodoApp'
+import TodoRootApp from './components/todo/RootApp'
 
 class App extends Component {
   render () {
@@ -26,7 +26,7 @@ class App extends Component {
         <tbody>
           <tr>
             <td className='center'>
-              <TodoApp />
+              <TodoRootApp />
             </td>
             <td>Todo application</td>
           </tr>

@@ -4,20 +4,27 @@ import Tasks from './containers/Tasks'
 import Footer from './components/Footer'
 import TodoInput from './components/TodoInput'
 import './todo.css'
-import { Provider } from 'react-redux'
-import store from './store'
+import { connect } from 'react-redux'
+import { addTask } from './actions/actionCreator'
 
-export default class TodoApp extends Component {
+class TodoApp extends Component {
   render () {
+    const { tasks } = this.props
     return (
-      <Provider store={store}>
-        <div>
-          <Title name='ToDo list' />
-          <TodoInput onChange={() => { console.log('Input changed') }} />
-          <Tasks />
-          <Footer records={[]} />
-        </div>
-      </Provider>
+      <div>
+        <Title name='ToDo list' />
+        <TodoInput onAdd={(val) => {
+          this.props.addTask(Date.now(), val)
+        }} />
+        <Tasks records={tasks} />
+        <Footer records={tasks} />
+      </div>
     )
   }
 }
+
+export default connect(state => ({
+  tasks: state.tasks
+}), {
+  addTask
+})(TodoApp)
