@@ -26,7 +26,7 @@ export default class Footer extends Component {
     const { records } = this.props
     return (
       <div className='tasks-footer'>
-        Displayed {records.count} of {records.count} records.<br />
+        Displayed <strong>{records.length}</strong> records.
         Filter:
         {FILTER_BUTTONS.map(({ text, value }, index) => (
           <button

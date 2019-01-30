@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import TasksList from '../components/TasksList'
+import { removeTask } from '../actions/actionCreator'
+import { connect } from 'react-redux'
 
-export default class Tasks extends Component {
+class Tasks extends Component {
   state = {
     filters: {
       isCompleated: null
@@ -13,12 +15,16 @@ export default class Tasks extends Component {
   }
   render () {
     const { filters: { isCompleated: isCompleatedFilter } } = this.state
-    const { records } = this.props
+    const { records, removeTask } = this.props
     console.log('isCompleatedFilter:', isCompleatedFilter)
     return (
       <div>
-        <TasksList records={records} />
+        <TasksList records={records} onRemove={removeTask} />
       </div>
     )
   }
 }
+
+export default connect(null, {
+  removeTask
+})(Tasks)

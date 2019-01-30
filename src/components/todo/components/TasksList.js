@@ -1,19 +1,25 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { updateTask } from '../actions/actionCreator'
+import { connect } from 'react-redux'
 
-export default class TasksList extends Component {
+class TasksList extends Component {
   static propTypes = {
-    records: PropTypes.array
+    records: PropTypes.array,
+    onRemove: PropTypes.func
   }
   static defaultProps = {
-    records: []
+    records: [],
+    onRemove: (id) => {}
   }
   onChangeCompleated = (e) => {
-    const id = e.target.getAttribute('data-id')
-    console.log('onChangeCompleated:', id)
+    const id = Number(e.target.getAttribute('data-id'))
+    this.props.updateTask(id, {
+      isCompleated: e.target.checked
+    })
   }
   render () {
-    const { records } = this.props
+    const { records, onRemove } = this.props
     return (
       <ul className='tasks-list'>
         {records.map((record, index) => (
@@ -25,9 +31,16 @@ export default class TasksList extends Component {
               data-id={record.id}
             />
             {record.text}
+            <button className='tasks-list-remove' onClick={() => {
+              onRemove(record.id)
+            }}>✘</button>
           </li>
         ))}
       </ul>
     )
   }
 }
+
+export default connect(null, {
+  updateTask
+})(TasksList)

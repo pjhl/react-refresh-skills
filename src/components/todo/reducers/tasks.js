@@ -21,6 +21,20 @@ export default (state = initialState, action) => {
         ...state,
         action.payload
       ]
+    case 'REMOVE_TASK':
+      return state.filter(el => el.id !== action.payload.id)
+    case 'UPDATE_TASK':
+      return state.map(el => {
+        if (el.id === action.payload.id) {
+          if (action.payload.text !== null) {
+            el.text = action.payload.text
+          }
+          if (action.payload.isCompleated !== null) {
+            el.isCompleated = action.payload.isCompleated
+          }
+        }
+        return el
+      })
     default:
       return state
   }
