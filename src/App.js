@@ -11,6 +11,7 @@ import HOCLoaderExample from './components/HOCLoaderExample'
 import PortalExample from './components/PortalExample'
 import ContextExample from './components/ContextExample'
 import RouteExample from './components/RouteExample'
+import TodoApp from './components/todo/TodoApp'
 
 class App extends Component {
   render () {
@@ -18,11 +19,17 @@ class App extends Component {
       <table className='App-table'>
         <thead>
           <tr>
-            <th style={{ minWidth: 250 }}>Example</th>
+            <th style={{ minWidth: 550 }}>Example</th>
             <th>Description</th>
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <TodoApp />
+            </td>
+            <td>Todo application</td>
+          </tr>
           <tr>
             <td className='center'>
               <RouteExample />
