@@ -5,18 +5,11 @@ import { removeTask } from '../actions/actionCreator'
 import { connect } from 'react-redux'
 
 class Tasks extends Component {
-  state = {
-    filters: {
-      isCompleated: null
-    }
-  }
   static propTypes = {
     records: PropTypes.array
   }
   render () {
-    const { filters: { isCompleated: isCompleatedFilter } } = this.state
     const { records, removeTask } = this.props
-    console.log('isCompleatedFilter:', isCompleatedFilter)
     return (
       <div>
         <TasksList records={records} onRemove={removeTask} />

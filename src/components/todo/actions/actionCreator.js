@@ -20,3 +20,8 @@ export const updateTask = (id, { text = null, isCompleated = null }) => ({
     isCompleated
   }
 })
+
+export const changeFilter = activeFilter => ({
+  type: 'CHANGE_FILTER',
+  payload: activeFilter
+})

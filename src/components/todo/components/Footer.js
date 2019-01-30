@@ -18,21 +18,30 @@ const FILTER_BUTTONS = [
 
 export default class Footer extends Component {
   static propTypes = {
-    records: PropTypes.array.isRequired
+    records: PropTypes.array,
+    onChangeFilter: PropTypes.func,
+    activeFilter: PropTypes.string
+  }
+  static defaultProps = {
+    records: [],
+    onChangeFilter: () => {},
+    activeFilter: null
   }
   render () {
-    // TODO: Remove this mocked var
-    const activeFilter = null
-    const { records } = this.props
+    const { records, activeFilter, onChangeFilter } = this.props
     return (
       <div className='tasks-footer'>
         Displayed <strong>{records.length}</strong> records.
         Filter:
         {FILTER_BUTTONS.map(({ text, value }, index) => (
           <button
+            type='button'
             key={index}
             className={activeFilter === value ? 'btn active' : 'btn'}
-            type='button'>
+            onClick={() => {
+              onChangeFilter(value)
+            }}
+          >
             {text}
           </button>
         ))}
