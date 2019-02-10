@@ -12,6 +12,7 @@ import PortalExample from './components/PortalExample'
 import ContextExample from './components/ContextExample'
 import RouteExample from './components/RouteExample'
 import TodoRootApp from './components/todo/RootApp'
+import ReduxForm from './components/redux-form/index'
 
 class App extends Component {
   render () {
@@ -24,6 +25,12 @@ class App extends Component {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <ReduxForm />
+            </td>
+            <td>Redux form example</td>
+          </tr>
           <tr>
             <td className='center'>
               <TodoRootApp />
