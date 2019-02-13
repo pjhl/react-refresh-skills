@@ -13,6 +13,7 @@ import ContextExample from './components/ContextExample'
 import RouteExample from './components/RouteExample'
 import TodoRootApp from './components/todo/RootApp'
 import ReduxForm from './components/redux-form/index'
+import Saga from './components/saga/index'
 
 class App extends Component {
   render () {
@@ -25,6 +26,12 @@ class App extends Component {
           </tr>
         </thead>
         <tbody>
+          <tr>
+            <td className='center'>
+              <Saga />
+            </td>
+            <td>Redux saga example</td>
+          </tr>
           <tr>
             <td className='center'>
               <ReduxForm />
